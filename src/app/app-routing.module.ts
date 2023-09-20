@@ -14,6 +14,14 @@ const routes: Routes = [
   {
     path: 'escaner-qr',
     loadChildren: () => import('./escaner-qr/escaner-qr.module').then( m => m.EscanerQRPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'registro',
+    loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule)
   }
 ];
 
