@@ -1,6 +1,9 @@
 ion-menu-button {
-    color: var(--ion-color-primary);
+    color: var(--ion-color-warning );
+
   }
+ 
+ 
   
   #container {
     text-align: center;
@@ -19,6 +22,7 @@ ion-menu-button {
   
   #titulo {
     margin-left: 39%;
+    
   
   }
   
@@ -48,3 +52,9 @@ ion-menu-button {
     text-align: center;
     
   }
+
+  
+  .ion-card-header ion-avatar {
+    margin-bottom: 1px; /* Ajusta la cantidad de espacio según tus preferencias */
+  }
+  
