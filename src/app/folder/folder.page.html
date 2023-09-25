@@ -1,0 +1,103 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title id="titulo">QRList</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    
+  </ion-header>
+
+<ion-card >
+
+  <ion-card-header  id="barralist"><ion-card-title>Recientes</ion-card-title></ion-card-header>
+
+  <ion-card-content>
+    <ion-list  >
+
+      <ion-item-sliding  >
+        <ion-item id="barralist">
+          <ion-label >link inscripcion duoc</ion-label>
+        </ion-item>
+
+        <ion-item-options side="end">
+          <ion-button [routerLink]="['/editar']" size="small" color="warning">
+            <ion-item-option color="warning">
+              <ion-icon slot="icon-only" name="create"></ion-icon>
+            </ion-item-option>
+          </ion-button>
+
+          <ion-button [routerLink]="['/editar']" size="small" color="danger">
+            <ion-item-option color="danger">
+              <ion-icon slot="icon-only" name="trash"></ion-icon>
+            </ion-item-option>
+          </ion-button>
+        </ion-item-options>
+      </ion-item-sliding>
+
+
+      <ion-item-sliding  >
+        <ion-item id="barralist">
+          <ion-label >link ichiraku ramen</ion-label>
+        </ion-item>
+
+        <ion-item-options side="end">
+          <ion-button [routerLink]="['/editar']" size="small" color="warning">
+            <ion-item-option color="warning">
+              <ion-icon slot="icon-only" name="create"></ion-icon>
+            </ion-item-option>
+          </ion-button>
+
+          <ion-button [routerLink]="['/editar']" size="small" color="danger">
+            <ion-item-option color="danger">
+              <ion-icon slot="icon-only" name="trash"></ion-icon>
+            </ion-item-option>
+          </ion-button>
+        </ion-item-options>
+      </ion-item-sliding>
+
+      <ion-item-sliding  >
+        <ion-item id="barralist">
+          <ion-label >link la chipeta</ion-label>
+        </ion-item>
+
+        <ion-item-options side="end">
+          <ion-button [routerLink]="['/editar']" size="small" color="warning">
+            <ion-item-option color="warning">
+              <ion-icon slot="icon-only" name="create"></ion-icon>
+            </ion-item-option>
+          </ion-button>
+
+          <ion-button [routerLink]="['/editar']" size="small" color="danger">
+            <ion-item-option color="danger">
+              <ion-icon slot="icon-only" name="trash"></ion-icon>
+            </ion-item-option>
+          </ion-button>
+        </ion-item-options>
+      </ion-item-sliding>
+
+    </ion-list>
+  </ion-card-content>
+</ion-card>
+
+  
+</ion-content>
+
+<div id="container-button">
+<ion-fab>
+  <ion-fab-button [routerLink]="['/escaner-qr']">
+    <ion-icon name="camera"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+</div>
+
+<ion-footer [translucent]="true">
+  <ion-toolbar>
+  <br><br><br><br><br>
+  </ion-toolbar>
+</ion-footer>

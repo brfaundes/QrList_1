@@ -1,0 +1,7 @@
+{
+  "name": "QrList",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
