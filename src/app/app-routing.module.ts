@@ -11,6 +11,7 @@ const routes: Routes = [
     path: 'folder/:id',
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
   },
+
   {
     path: 'escaner-qr',
     loadChildren: () => import('./escaner-qr/escaner-qr.module').then( m => m.EscanerQRPageModule)
@@ -38,6 +39,10 @@ const routes: Routes = [
   {
     path: 'splash',
     loadChildren: () => import('./splash/splash.module').then( m => m.SplashPageModule)
+  },
+  {
+    path: 'perfil',
+    loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
   },
   
 
