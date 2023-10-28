@@ -1,0 +1,21 @@
+{
+  "targets": {
+    "qrlist-8aa41": {
+      "hosting": {
+        "app": [
+          "qrlist-8aa41"
+        ]
+      }
+    },
+    "qrlist-4a8dd": {
+      "hosting": {
+        "app": [
+          "qrlist-4a8dd"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "qrlist-4a8dd"
+  }
+}
