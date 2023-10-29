@@ -1,14 +1,13 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-buttons slot="start">
+<ion-header [translucent]="true" color="warning">
+  <ion-toolbar >
+    <ion-buttons slot="start" >
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title id="titulo">Escanea el QR</ion-title>
+    <ion-title id="titulo">QRList</ion-title>
 
- 
- <ion-button [routerLink]="['/folder/inbox']" shape="round"  fill="outline" id= "bot_atras"  slot="end">
-    <ion-icon slot="icon-only" name="chevron-back-circle"></ion-icon>
-  </ion-button>
+    <ion-button [routerLink]="['/folder/inbox']" shape="round" fill="outline" id="bot_atras" slot="end">
+      <ion-icon slot="icon-only" name="chevron-back-circle"></ion-icon>
+    </ion-button>
 
   </ion-toolbar>
 </ion-header>
@@ -18,13 +17,13 @@
 <ion-card>
   <ion-card-content>
     <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-    <ion-card-title>Escaner qr </ion-card-title>
+    <ion-card-title class="ion-text-center">Escaner qr </ion-card-title>
   </ion-card-content>
 </ion-card>
 <br><br><br><br>
 <div id="container-button">
 <ion-fab>
-  <ion-fab-button [routerLink]="['/escaner-qr']">
+  <ion-fab-button [routerLink]="['/guardar']">
     <ion-icon name="camera"></ion-icon>
   </ion-fab-button>
 </ion-fab>
