@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { AvatarService } from 'src/app/avatar.service'; // Asegúrate de proporcionar la ruta correcta a tu servicio Avatar
+import { AvatarService } from 'src/app/avatar.service';
 
 @Component({
   selector: 'app-perfil',
@@ -11,11 +11,11 @@ export class PerfilPage implements OnInit {
 
   selectedAvatar: string = '';
   characters = [];
-  chunkedCharacters: any[] = [];
+  chunkedCharacters: any[] = []; // Agregar la definición de chunkedCharacters
 
   constructor(
     private http: HttpClient,
-    private avatarService: AvatarService // Agregar el servicio AvatarService
+    private avatarService: AvatarService
   ) { }
 
   ngOnInit() {
@@ -23,7 +23,7 @@ export class PerfilPage implements OnInit {
       .subscribe(res => {
         console.log(res);
         this.characters = res.results;
-        this.chunkedCharacters = this.chunkArray(this.characters, 2);
+        this.chunkedCharacters = this.chunkArray(this.characters, 2); // Mostrar 4 elementos en cada iteración
       });
   }
 

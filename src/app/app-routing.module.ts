@@ -11,7 +11,6 @@ const routes: Routes = [
     path: 'folder/:id',
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
   },
-
   {
     path: 'escaner-qr',
     loadChildren: () => import('./escaner-qr/escaner-qr.module').then( m => m.EscanerQRPageModule)
@@ -43,6 +42,10 @@ const routes: Routes = [
   {
     path: 'perfil',
     loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
+  {
+    path: 'reset',
+    loadChildren: () => import('./reset/reset.module').then( m => m.ResetPageModule)
   },
   
 
