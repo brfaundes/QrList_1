@@ -32,11 +32,17 @@
 
                 <ion-list>
                   <ion-item>
-                    <ion-input labelPlacement="floating" >
+                    <ion-input [(ngModel)]="email" labelPlacement="floating" >
                       <div slot="label">Email </div>
                     </ion-input>
                   </ion-item>
                 </ion-list>
+
+                <ion-row class="ion-text-center"> <!-- Utiliza ion-row para los botones -->
+                  <ion-col>
+                    <ion-button (click)="resetPassword()" color="light">Enviar</ion-button>
+                  </ion-col>
+                </ion-row>
 
               </ion-col>
               <ion-col></ion-col>
