@@ -49,3 +49,15 @@ ion-menu-button {
   text-decoration: none;
 }
 
+
+ion-content.gradiente {
+  --background: linear-gradient(to bottom, #4c669f, #3b5998);
+  }
+  
+  ion-content[fullscreen=true] {
+  height: 100%;
+  }
+  
+  ion-card {
+  height: 100%;
+  }
