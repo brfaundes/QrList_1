@@ -5,6 +5,14 @@
     </ion-buttons>
     <ion-title id="titulo">QRList</ion-title>
 
+    <section>
+      <button>R</button>
+      <div>
+        <video #videoElement></video>
+      </div>
+      <p>{{"Centrar camara con QR"}}</p>
+    </section>
+
     <ion-button [routerLink]="['/folder/inbox']" shape="round" fill="outline" id="bot_atras" slot="end">
       <ion-icon slot="icon-only" name="chevron-back-circle"></ion-icon>
     </ion-button>
