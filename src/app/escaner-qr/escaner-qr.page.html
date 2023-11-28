@@ -5,14 +5,6 @@
     </ion-buttons>
     <ion-title id="titulo">QRList</ion-title>
 
-    <section>
-      <button>R</button>
-      <div>
-        <video #videoElement></video>
-      </div>
-      <p>{{"Centrar camara con QR"}}</p>
-    </section>
-
     <ion-button [routerLink]="['/folder/inbox']" shape="round" fill="outline" id="bot_atras" slot="end">
       <ion-icon slot="icon-only" name="chevron-back-circle"></ion-icon>
     </ion-button>
@@ -20,24 +12,16 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-<br><br><br><br>
-<ion-card>
-  <ion-card-content>
-    <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-    <ion-card-title class="ion-text-center">Escaner qr </ion-card-title>
-  </ion-card-content>
-</ion-card>
-<br><br><br><br>
-<div id="container-button">
-<ion-fab>
-  <ion-fab-button [routerLink]="['/guardar']">
-    <ion-icon name="camera"></ion-icon>
-  </ion-fab-button>
-</ion-fab>
-</div>
-
-</ion-content>
+<section class="wrapper__scanner">
+  <button class="float-button" (click)="changeCamera()"><ion-icon name="camera-outline"></ion-icon></button>
+  <div class="video--container">
+    <video #video autoplay playsinline></video>
+  </div>
+  <p class="mt-2">{{"Centrar camara con QR"}}</p>
+  <div class="video--container" style="display: none;">
+    <canvas id="canvas" #canvas></canvas>
+  </div>
+</section>
 
 <ion-footer [translucent]="true">
   <ion-toolbar>
