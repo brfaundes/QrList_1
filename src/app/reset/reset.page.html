@@ -1,0 +1,41 @@
+<ion-header [translucent]="true" color="warning">
+  <ion-toolbar>
+    <ion-title id="titulo">QRList</ion-title>
+    <ion-button [routerLink]="['/login']" shape="round" fill="outline" id="bot_atras" slot="end">
+      <ion-icon slot="icon-only" name="chevron-back-circle"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-row class="ion-align-items-center">
+    <ion-col size="10" offset="1"> <!-- Se ajusta el ancho del contenedor -->
+      <ion-card id="card" class="ion-padding">
+        <h1 > Ingresa tu Email</h1>
+
+        <p class="SubTitulo">Para recibir un restablecimiento de contraseña</p>
+
+        <ion-card-content>
+          <ion-list>
+            <ion-item>
+              <ion-label position="floating">Email</ion-label>
+              <ion-input [(ngModel)]="email" clearInput></ion-input>
+            </ion-item>
+          </ion-list>
+
+          <ion-row class="ion-justify-content-center ion-padding-top">
+            <ion-col size="8">
+              <ion-button (click)="resetPassword()" expand="full" color="light">Enviar</ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-content>
+
+<ion-footer [translucent]="true">
+  <ion-toolbar>
+    <h1 style="text-align: center">QRList</h1>
+  </ion-toolbar>
+</ion-footer>

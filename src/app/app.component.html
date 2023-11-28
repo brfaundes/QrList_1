@@ -1,22 +1,28 @@
 <ion-app>
   <ion-split-pane contentId="main-content">
-    <ion-menu contentId="main-content" type="overlay">
+    <ion-menu contentId="main-content" type="overlay" menuId="menu">
       <ion-content>
-        
-        <ion-list id="inbox-list">
-          
-
+        <!-- Contenido del menú lateral -->
+        <ion-list id="inbox-list" style="padding-left: 0.5cm;">
+          <ion-avatar style="margin-left: 0.5cm; width: 60px; height: 60px;">
+            <img [src]="selectedAvatar ? selectedAvatar : 'assets/icon/default-img.jpg'" alt="Selected Avatar">
+          </ion-avatar>
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
-            <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
+            <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected" style="padding-top: 0.5cm;">
               <ion-icon aria-hidden="true" slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
               <ion-label>{{ p.title }}</ion-label>
             </ion-item>
           </ion-menu-toggle>
         </ion-list>
 
+        <!-- Botón de Cierre de Sesión -->
+        <ion-item (click)="cerrarSesion()" style="padding-top: 0.5cm;">
+          <ion-icon name="log-out"></ion-icon>
+          Cerrar Sesión
+        </ion-item>
       </ion-content>
     </ion-menu>
+
     <ion-router-outlet id="main-content"></ion-router-outlet>
   </ion-split-pane>
 </ion-app>
-
